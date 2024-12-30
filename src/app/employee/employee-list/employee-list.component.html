@@ -1,0 +1,39 @@
+<!-- employee-list.component.html -->
+<div> 
+  <br>
+  <button class="btn success shadow-effect" nz-button [nzType]="'primary'" [routerLink]="['/employee/add']">
+    <i nz-icon nzType="plus"></i> 
+  </button>   
+  <br><br>
+    <nz-table class="table" ngSkipHydration #basicTable [nzData]="employees" [nzBordered]="true" [nzSize]="'middle'" [nzShowPagination]="false">
+      <thead>
+        <tr>
+          <th class="th" nzWidth="25%">Nombre</th>
+          <th class="th" nzWidth="25%">Puesto</th>
+          <th class="th" nzWidth="20%">Departamento</th>
+          <th class="th" nzWidth="10%" nzAlign="center">Modificar</th>
+          <th class="th" nzWidth="10%" nzAlign="center">Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          
+          <td class="td">{{ employee.name }}</td>
+          <td class="td">{{ employee.position }}</td>
+          <td class="td">{{ employee.department }}</td>
+          <td class="td" nzAlign="center">
+            <button class="btn primary shadow-effect" nz-button [nzType]="'default'" [routerLink]="['/employee/edit', employee.id]">
+              <i nz-icon nzType="edit"></i>
+            </button>
+          </td>
+          <td class="td" nzAlign="center">
+            <button class="btn danger shadow-effect" nz-button [nzType]="'default'" (click)="deleteEmployee(employee.id)">
+              <i nz-icon nzType="delete"></i> 
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </nz-table>
+    <br>
+  </div>
+  

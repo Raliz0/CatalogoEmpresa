@@ -1,0 +1,27 @@
+<div>
+  <button class="btnReturn shadow-effect" nz-button nzType="link" (click)="goBack()">
+    <i nz-icon nzType="left-square" nzTheme="outline"></i>Regresar</button>
+  <br><br>
+</div>
+<div>
+    <form class="form" nz-form [nzLayout]="'vertical'" (ngSubmit)="saveEmployee()">
+      <nz-form-item>
+        <nz-form-control>
+          <input class="controls" nz-input [(ngModel)]="employee.name" name="name" placeholder="Name" required />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control>
+          <input class="controls" nz-input [(ngModel)]="employee.position" name="position" placeholder="Position" required />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control>
+          <input class="controls" nz-input [(ngModel)]="employee.department" name="department" placeholder="Department" required />
+        </nz-form-control>
+      </nz-form-item>
+      <button class="btn success" nz-button nzType="primary" [disabled]="!employee.name || !employee.position || !employee.department">
+        Guardar
+      </button>
+    </form>
+</div>

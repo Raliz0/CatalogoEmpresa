@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.form{
+    width: 400px;
+    background-color:  rgb(230, 230, 230);
+    padding: 30px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+.controls{
+    width: 100%;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+}
+
+.btnReturn{
+    width: 120px;
+    border: none;
+    padding: 5px;
+    color: rgb(78, 78, 78);
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+.btn{
+    width: 100%;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+.success {background-color: #04AA6D;} 
+.success:hover {background-color: #46a049;}
+
+.shadow-effect {
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #b1b1b1; /* Color base del botón */
+    transition: box-shadow 0.3s ease-in-out; /* Transición suave del efecto de sombra */
+  }
+  .shadow-effect:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta el desplazamiento y la opacidad de la sombra */
+  }
